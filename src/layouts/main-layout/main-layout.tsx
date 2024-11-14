@@ -6,9 +6,9 @@ type Props = {
 }
 const MainLayout: React.FC<Props> = props => {
     return (
-        <div className='flex flex-col items-center gap-4'>
+        <div className='flex flex-col items-center'>
             <Header/>
-            <main className='w-3/4'>
+            <main className='w-full'>
                 {props.children}
             </main>
             <Footer/>
