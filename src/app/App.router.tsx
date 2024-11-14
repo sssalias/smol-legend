@@ -1,4 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
+import { HomePage } from 'src/pages/home-page'
+import { MapPage } from 'src/pages/map-page'
 
 interface IRoute {
     path: string
@@ -6,7 +8,14 @@ interface IRoute {
 }
 
 const RouterData: IRoute[] = [
-
+    {
+        path: '/',
+        page: <HomePage/>
+    },
+    {
+        path: '/map',
+        page: <MapPage/>
+    }
 ]
 
 const AppRouter: React.FC = () => {
