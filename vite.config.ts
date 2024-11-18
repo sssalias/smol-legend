@@ -6,6 +6,9 @@ export default defineConfig({
   resolve: {
     alias: {
       src: '/src',
-    }
+    },
+  },
+  build: {
+    target: "ES2022"
   }
 })
