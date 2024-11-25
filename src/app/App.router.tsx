@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import { AboutPage } from 'src/pages/about-page'
 import { HomePage } from 'src/pages/home-page'
 import { MapPage } from 'src/pages/map-page'
 
@@ -15,6 +16,10 @@ const RouterData: IRoute[] = [
     {
         path: '/map',
         page: <MapPage/>
+    },
+    {
+        path: '/about',
+        page: <AboutPage/>
     }
 ]
 

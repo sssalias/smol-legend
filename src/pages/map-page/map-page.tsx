@@ -1,6 +1,6 @@
-import { Modal, ModalBody, ModalContent, ModalHeader, useDisclosure } from '@nextui-org/react'
 import { MainLayout } from 'src/layouts'
 import {YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker} from 'src/shared/libs/ymaps'
+import { Marker } from 'src/widgets/marker'
 import type {LngLat, YMapLocationRequest} from 'ymaps3'
 
 const LOCATION: YMapLocationRequest = {
@@ -19,26 +19,15 @@ const coords: {coords: LngLat}[] = [
 
 //   55.499460, 31.817913
 const MapPage: React.FC = () => {
-
-    const obj = useDisclosure()
-    
     return (
         <MainLayout>
-            <Modal size='4xl' isOpen={obj.isOpen} onOpenChange={obj.onOpenChange}>
-                <ModalContent>
-                    <ModalHeader>Объект?</ModalHeader>
-                    <ModalBody>
-
-                    </ModalBody>
-                </ModalContent>
-            </Modal>
             <div className='w-full h-screen'>
                 <YMap location={LOCATION}>
                     <YMapDefaultSchemeLayer />
                     <YMapDefaultFeaturesLayer />
                     {coords.map(el => (
                         <YMapMarker coordinates={el.coords}>
-                            <button onClick={obj.onOpen} className='bg-red-500 h-[50px] w-[50px] rounded-full text-white font-bold text-2xl hover:bg-red-400'>!</button>
+                            <Marker coordinates={[31.817881, 55.499470]} title='Мост' body='Очень крутой мост'/>
                         </YMapMarker>
                     ))}
                 </YMap>

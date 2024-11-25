@@ -1,4 +1,4 @@
-import { Modal, ModalContent, ModalHeader } from '@nextui-org/react'
+import { Modal, ModalBody, ModalContent, ModalHeader } from '@nextui-org/react'
 
 type Props = {
     title: string, // Название объекта
@@ -9,9 +9,13 @@ type Props = {
 }
 const MarkerModal: React.FC<Props> = props => {
     return (
-        <Modal>
+        <Modal isOpen={props.isOpnen} onOpenChange={props.onOpenChange}>
             <ModalContent>
-                <ModalHeader></ModalHeader>
+                <ModalHeader>{props.title}</ModalHeader>
+                <ModalBody>
+                    <img src={props.img}/>
+                    <span>{props.body}</span>
+                </ModalBody>
             </ModalContent>
         </Modal>
     )

@@ -8,7 +8,7 @@ const MainLayout: React.FC<Props> = props => {
     return (
         <div className='flex flex-col items-center'>
             <Header/>
-            <main className='w-full'>
+            <main className='mt-[100px] w-full'>
                 {props.children}
             </main>
             <Footer/>
