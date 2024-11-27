@@ -7,7 +7,7 @@ const links = [
         title: 'Карта'
     },
     {
-        path: '/about',
+        path: '/',
         title: 'О нас'
     },
     {

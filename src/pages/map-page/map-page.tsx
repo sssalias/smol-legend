@@ -6,7 +6,7 @@ import type {YMapLocationRequest} from 'ymaps3'
 
 const LOCATION: YMapLocationRequest = {
     center: [31.82, 55.498],
-    zoom: 14
+    zoom: 12
   }
 
 
